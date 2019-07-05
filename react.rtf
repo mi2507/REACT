@@ -1,0 +1,235 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1046{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fmodern Lucida Console;}{\f2\fmodern\fcharset0 Lucida Console;}}
+{\colortbl ;\red0\green0\blue255;}
+{\*\generator Riched20 10.0.17134}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang22 framework -\par
+react vue e angular - bibliotecas mais usadas \par
+jquery - uma biblioteca antiga porem mto usada \par
+cada biblioteca tem um objetivo.\par
+biblioteca - voce importa a biblioteca e usa peda\'e7os dela no codigo , nao muda a estrutura do js .\par
+interface- parte visual -intera\'e7\'e3o entre humano e o computador . \par
+engenheiro software do facebook criou o react \par
+\b React - biblioteca que falicita a interfaces dos usuario \par
+\b0 instala\'e7\'e3o CDN no html :\par
+ <script crossorigin src="{{\field{\*\fldinst{HYPERLINK https://unpkg.com/react@16/umd/react.development.js }}{\fldrslt{https://unpkg.com/react@16/umd/react.development.js\ul0\cf0}}}}\f0\fs22 "></script>\par
+<script crossorigin src="{{\field{\*\fldinst{HYPERLINK https://unpkg.com/react-dom@16/umd/react-dom.development.js }}{\fldrslt{https://unpkg.com/react-dom@16/umd/react-dom.development.js\ul0\cf0}}}}\f0\fs22 "></script>\par
+\par
+render = reinderizar \par
+.render () - precisa de dois parametros (o que vc quer reinderizar , e onde ) - \par
+elemento (o q) \par
+container (onde) - div vazia \par
+instalar o compilador react (babel)\par
+instala\'e7\'e3o local \par
+\f1\fs18  nmp init\par
+$ npm install @babel/core @babel/cli --save-dev\par
+npx babel\f2\lang1046\par
+npx babel --version \f1\lang22\par
+\f2\lang1046 na documenta\'e7\'e3o \par
+{{\field{\*\fldinst{HYPERLINK https://babeljs.io/docs/en/babel-preset-env }}{\fldrslt{https://babeljs.io/docs/en/babel-preset-env\ul0\cf0}}}}\f1\fs18\lang22\par
+{{\field{\*\fldinst{HYPERLINK https://babeljs.io/docs/en/babel-preset-react }}{\fldrslt{https://babeljs.io/docs/en/babel-preset-react\ul0\cf0}}}}\f2\fs18\lang1046  => \par
+\f1 npm install --save-dev @babel/preset-react\par
+\f2\lang22\par
+\lang1046 npx babel script.js --out-file=compilado.js --presents=@babel/env,@babel/react\f1\lang22\par
+\par
+\f2\lang1046 criar projeto e exportar p outras pessoas : \par
+\par
+angular \'e9 um pacote completo \par
+react s\'e3o varias pe\'e7as \par
+\b\par
+<<instala\'e7\'e3o- passo a passo >>\par
+\b0 cria pasta .js e .html \par
+cdn -copia os links e coloca o script \par
+\f0\fs22\lang22 <script crossorigin src="{{\field{\*\fldinst{HYPERLINK https://unpkg.com/react@16/umd/react.development.js }}{\fldrslt{https://unpkg.com/react@16/umd/react.development.js\ul0\cf0}}}}\f0\fs22 "></script>\par
+<script crossorigin src="{{\field{\*\fldinst{HYPERLINK https://unpkg.com/react-dom@16/umd/react-dom.development.js }}{\fldrslt{https://unpkg.com/react-dom@16/umd/react-dom.development.js\ul0\cf0}}}}\f0\fs22 "></script>\par
+\par
+PARAMETRO - modulariza as fun\'e7\'f5es \par
+\f2\fs18\lang1046\par
+cria uma div vazia com ID =app => para criar um H1 dentro . \par
+\b <<instalando o compilador>>\par
+na pasta do projeto \par
+\b0 npm init - enter at\'e9 o ok \par
+ele cria um arquivo package.jason - com nome e vers\'e3o \par
+\b <<intalando o babel>> \par
+\b0 npm install --save-dev @babel/core @babel/cli\par
+
+\pard\sa200\sl480\slmult1 npm install --save-dev @babel/present-env @babel/present-react\f1\lang22\par
+\f2\lang1046 npx babel script.js --out-file=compilado.js --presets=@babel/env,@babel/react \par
+npx babel script.js --out-file=compilado.js --presets=@babel/env,@babel/react --watch\par
+contol c - para de compilar \par
+e instalar o liveserver\par
+\f1 npx live-server -v\f2\par
+\f1 npm install --save-dev live-server\par
+npx live-server\par
+\f2 live server -cria um servidor local e come\'e7a a ssistir \par
+abrir um segundo terminal\par
+
+\pard\sa200\sl276\slmult1\f1 npx babel script.js --out-file=compilado.js --watch --presets=@babel/env,@babel/react\f2\par
+
+\pard\sa200\sl480\slmult1 {{\field{\*\fldinst{HYPERLINK http://127.0.0.1:8080/ }}{\fldrslt{http://127.0.0.1:8080/\ul0\cf0}}}}\f2\fs18\par
+no index mudar o ./script.js para compilado.js \par
+\b instala\'e7\'e3o global - vc nao transmite o pacote do projeto para outras pessoas.\b0\par
+\b npx - procura dentro da pasta.\par
+\par
+***FORMA SIMPLES***\par
+cria nova pasta - npm init - \f1  npx create-react-app my-app\f2  => mensagem de instalado com sucesso \b0\f1 Happy hacking!\par
+\f2 entra na pasta q ele cria , nesse caso \b\f1 my-app\f2   \par
+\b0\f1 npm run \f2 start\par
+ele ja traz o arquivo.html e o arquivo  .js\par
+\par
+nodemodules nao precisa subir no git \par
+sempre q for abrir um projeto novo dar um npm install , ele cria tudo que for necessario \par
+\par
+props = propriedades - sempre \'e9 um objeto \par
+function BemVinda(props)\{\par
+    return <h1>oi,\{props.apelido\}</h1>\par
+\}\par
+ReactDOM.render(< BemVinda apelido ="mi"/>, document.getElementById('root'));\par
+apelido = propriedade.\par
+\par
+todo componente precisa de uma propriedade que \'e9 um objeto\par
+no react se chama a fun\'e7\'e3o com uma tag htlm autofechante \par
+\par
+function BemVinda (props)\par
+return (\par
+<div>\par
+<h1>\{props.saudacao\}, \{props.apelido\}</h1>\par
+<h2>seu signo \'e9  \{props.signo\} , </h2>\par
+</div>\par
+function App (props)\{\par
+return (\par
+<div>\par
+apelido="mi"\par
+saudacao="oi meu amor"\par
+signo="leao"\par
+</div>\par
+\par
+\b class:\par
+constructor : \b0\'e9 o m\'e9todo de uma classe .\par
+class chocolate \{\par
+construtor ()\{\par
+\}\par
+\}\par
+class chocolate extends React.Component \{\par
+render ()\{\par
+return (\par
+<h1>reprograma chocolte </h1>\par
+)\par
+\}\par
+\}\par
+\par
+ReactDOM.render(<cho\par
+chocolate />, document.getElementById('root'));\par
+\par
+class Profissional extends Pessoa \{\par
+constructor (nome, idade, profissao)\{\par
+super(nome,idade);\par
+this.profissao = profissao\par
+\}\par
+\}\par
+const michelle = new Pessoa('michelle, 32')\par
+const michelleAdulta = new Profissional('Michelle,33, 'dev')\par
+\par
+class chocolate extends React.Component \{\par
+render ()\{\par
+return (\par
+<div>\par
+<h1>reprograma chocolate </h1>\par
+</div>\par
+)\par
+\}\par
+\}\par
+ReactDOM.render(<chocolate />, document.getElementById('root'));\par
+\par
+cada escopo \'e9 uma caixa p ver escopo em java script olhe as chaves\par
+elemento = retorna um jsx (nao recebe parametro e nao pe uma func\'e3o)\par
+componente funcional = declara uma fun\'e7\'e3o com parametro \par
+o componente deve ser chamado no react.DOM dentro de uma tag fechada \par
+ex: ReactDOM.render(<chocolate />, document.getElementById('root'));\par
+por no git ou passar p alguem , jogar todas as pastas menos node_modules\par
+\par
+classe \'e9 um pacote do componente \par
+let count = 0\par
+class Contador extends React.component \{\par
+addUm = () =>\par
+count++\par
+console.log ('count')\par
+\}\par
+subtrairUm = () => \{\par
+\}\par
+render() \{\par
+return(\par
+<div>\par
+<h2>Count: \{count\} </h2>\par
+<button onClick=\{this.teste\} +1 </button>\par
+<button>-1</button>\par
+<button> reset <button>\par
+<div>\par
+\}\par
+\}\par
+\par
+fork - clonar -entrar na pasta onde esta os package - npm install (para instalar o nodes.modules) apos instalar npm start\par
+\par
+somente o Render () printa na tela \par
+\b STATES - \b0 fica somente dentro do contador \par
+exemplo : com ReactDom\par
+let count = 0\par
+class Contador extends React.Component \{\par
+    addUm = () => \{\par
+        count++\par
+        console.log(count)\par
+        ReactDOM.render(<Contador />, document.getElementById('root'));\par
+    \}\par
+\b Com states \par
+let count = 0\par
+class Contador extends React.Component \{\par
+constructor (props) \{\par
+super (props);\par
+this.state = \{ \par
+cont : 0\par
+\}\par
+this.addUM = this.addUm.bind(this)\par
+\}\par
+  addUm = () => \{\par
+  this.setState ( (estadoAnterior) => \{\par
+return \{\par
+cont: estadoAnterior.cont + 1 \par
+\}\par
+\})\par
+ render() \{\par
+        return (\par
+            <div>\par
+                <h2>Count: \{count\} </h2>\par
+                <button onClick=\{this.addUm.bind(this)\}> +1 </button>\par
+  \}\par
+nao precisa do reactDom.render\par
+props depois de reinderezado nao \'e9 mais modificado \par
+SUPER = herda as propriedades da mae  (react.component)\par
+constructor \'e9 um metodo (javascript) p usar um estado p ele , se tem props nao precisa  \par
+state \'e9 objeto \par
+arrow functions nao precisa de bind \par
+set state - mudar estado e reinderizar \par
+render \'e9 pr\'f3prio do react\par
+componentDidMount() - quando vc cria um componente\par
+componentDidUpdate() - quando muda o estado do componente \par
+componentWillUnmount() - \'e9 invocado imediatamente antes que um componente seja desmontado e destru\'eddo.\par
+\par
+se tem uma a\'e7\'e3o usa se classe \par
+componente funcional quando retorna jsx\b0\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\f1\par
+\b\par
+\par
+\b0\f2\par
+
+\pard\sa200\sl276\slmult1\par
+\f1\lang22\par
+\f0\fs22\par
+\par
+\par
+}
+ 

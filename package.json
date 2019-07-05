@@ -1,0 +1,28 @@
+{
+  "name": "reactsemana14",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "live-server": "^1.2.1"
+  },
+  "scripts": {
+    "compilar": "babel script.js --out-file=compilado.js --presets=@babel/env,@babel/react --watch",
+    "server": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mi2507/REACT.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mi2507/REACT/issues"
+  },
+  "homepage": "https://github.com/mi2507/REACT#readme",
+  "description": ""
+}
